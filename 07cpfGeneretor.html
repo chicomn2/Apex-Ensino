@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de CPF's</title>
+</head>
+<body>
+    <script>
+        
+        alert('Olá, bom dia, vamos gerar um CPF?');
+        var nome = window.prompt('Digite o seu nome');
+        var numero9 = window.prompt('Digite o numero de seu estado sendo: 1 – DF, GO, MS, MT e TO. 2 – AC, AM, AP, PA, RO e RR. 3 – CE, MA e PI. 4 – AL, PB, PE, RN. 5 – BA e SE. 6 – MG. 7 – ES e RJ. 8 – SP. 9 – PR e SC. 0 – RS ');
+
+        if(numero9>=0 && numero9<=9){
+            var numero1 = Math.random(0, 9);
+            numero1 = numero1*10
+            numero1 = Math.round(numero1);
+            if(numero1==10){
+            numero1 = 0
+            }
+        
+            var numero2 = Math.random(0, 9);
+            numero2 = numero2*10
+            numero2 = Math.round(numero2);
+            if(numero2==10){
+            numero2 = 0
+            }
+    
+            var numero3 = Math.random(0, 9);
+            numero3 = numero3*10
+            numero3 = Math.round(numero3);
+            if(numero3==10){
+                numero3 = 0
+            }
+
+            var numero4 = Math.random(0, 9);
+            numero4 = numero4*10
+            numero4 = Math.round(numero4);
+            if(numero4==10){
+                numero4 = 0
+            }
+
+            var numero5 = Math.random(0, 9);
+            numero5 = numero5*10
+            numero5 = Math.round(numero5);
+            if(numero5==10){
+                numero5 = 0
+            }
+
+            var numero6 = Math.random(0, 9);
+            numero6 = numero6*10
+            numero6 = Math.round(numero6);
+            if(numero6==10){
+                numero6 = 0
+            }
+
+            var numero7 = Math.random(0, 9);
+            numero7 = numero7*10
+            numero7 = Math.round(numero7);
+            if(numero7==10){
+                numero7 = 0
+            }
+
+            var numero8 = Math.random(0, 9);
+            numero8 = numero8*10
+            numero8 = Math.round(numero8);
+            if(numero8==10){
+                numero8 = 0
+            }
+
+            var numero10 = ((numero1*10)+(numero2*9)+(numero3*8)+(numero4*7)+(numero5*6)+(numero6*5)+(numero7*4)+(numero8*3)+(numero9*2))%11
+            if(numero10<=1){
+                numero10 = 0
+            } else{
+                numero10 = 11-numero10
+            }
+
+            var numero11 = ((numero2*10)+(numero3*9)+(numero4*8)+(numero5*7)+(numero6*6)+(numero7*5)+(numero8*4)+(numero9*3)+(numero10*2))%11
+            if(numero11<=1){
+                numero11 = 0
+            } else{
+                numero11 = 11-numero11
+            }
+
+
+            document.write(numero1 + ' - número gerado aleatóriamente pela Receita Federal<br>');
+            document.write(numero2 + ' - número gerado aleatóriamente pela Receita Federal<br>');
+            document.write(numero3 + ' - número gerado aleatóriamente pela Receita Federal<br>');
+            document.write(numero4 + ' - número gerado aleatóriamente pela Receita Federal<br>');
+            document.write(numero5 + ' - número gerado aleatóriamente pela Receita Federal<br>');
+            document.write(numero6 + ' - número gerado aleatóriamente pela Receita Federal<br>');
+            document.write(numero7 + ' - número gerado aleatóriamente pela Receita Federal<br>');
+            document.write(numero8 + ' - número gerado aleatóriamente pela Receita Federal<br>');
+            document.write(numero9 + ' - número baseado no estado<br>');
+            document.write(numero10 + ' - número calculado<br>');
+            document.write(numero11 + ' - número calculado<br>');
+            document.write('<h1>O seu CPF '+ nome + ', poderia ser:<br></h1>')
+            document.write('<h1>'+numero1 + numero2 + numero3 + '.' + numero4 + numero5 + numero6 + '.' + numero7 + numero8 + numero9 + '-' + numero10 + numero11+'</h1>');
+        }
+    else{
+        document.write('<h1>Você não digitou um número válido</h1>')
+    }
+
+    </script>
+    
+</body>
+</html>
