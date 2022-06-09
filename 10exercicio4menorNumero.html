@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menor número</title>
+</head>
+<body>
+    <script>
+        var numero1 = prompt('Digite um número');
+        var numero2 = prompt('Digite outro número');
+        var numero3 = prompt('Digite mais um número');
+
+        numero1 = parseFloat(numero1);
+        numero2 = parseFloat(numero2);
+        numero3 = parseFloat(numero3);
+
+        document.write('O primeiro número digitado foi<h1> '+numero1+'</h1><br>');
+        document.write('O segundo número digitado foi<h1> '+numero2+'</h1><br>');
+        document.write('O terceiro número digitado foi<h1> '+numero3+'</h1><br>');
+
+        if( isNaN(numero1) || isNaN(numero2) || isNaN(numero3)){
+            document.write('<h1>Você não digitou todos os números coretamente</h1>');
+        } else{
+            document.write('<h1>O menor número é '+ Math.min(numero1, numero2, numero3)   +'</h1><br>');
+        }
+
+
+    </script>
+    
+</body>
+</html>
