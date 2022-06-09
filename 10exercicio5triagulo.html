@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triângulo</title>
+</head>
+<body>
+    <script>
+        var lado1 = parseFloat(prompt('digite 1º lado do triângulo'));
+        var lado2 = parseFloat(prompt('digite 2º lado do triângulo'));
+        var lado3 = parseFloat(prompt('digite 3º lado do triângulo'));
+        document.write('<h1>1º lado '+lado1+'mm</h1><br>')
+        document.write('<h1>2º lado '+lado2+'mm</h1><br>')
+        document.write('<h1>3º lado '+lado3+'mm</h1><br>')
+
+        if(isNaN(lado1)||isNaN(lado2)||isNaN(lado3)){
+            document.write('<h1> Você não digitou os números corretamente</h1>');
+        } else if(lado1==lado2 && lado1==lado3){
+            document.write('<h1> Você digitou um triângulo Equilátero</h1>');
+        } else if(lado1!=lado2 && lado1!=lado3 && lado2!=lado3){
+            document.write('<h1> Você digitou um triângulo Escaleno</h1>')
+        } else {
+            document.write('<h1> Você digitou um triângulo Isósceles</h1>')
+        }
+    </script>
+</body>
+</html>
