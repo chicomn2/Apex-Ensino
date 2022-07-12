@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de linhas</title>
+</head>
+<body>
+    <script>
+        /*criar uma matriz com 5 linhas (separados por linhas) e com números de alunos( separados em alunoss)
+        depois de criar a matriz percorrer ela e identificar o linha com mais alunos e o com menos alunos*/ 
+        let cursoMenor = ""
+        let cursoMaior = ""
+        let maisAlunos = 0
+        let menosAlunos = 0
+        
+            let escola = [
+            ["Inglês", 30],
+            ["Alemão", 12],
+            ["Francês", 7],
+            ["Espanhol", 20],
+            ["Mandarin", 10]
+        ];
+        for(var index = 0; index<escola.length; index++){
+            for(var alunos = 0; alunos<escola[index].length; alunos++){
+                document.write(escola[index][alunos]+", ")
+            }
+            document.write("<br>")
+        }
+        document.write("<br>")
+        
+        
+        for(let linha = 0; linha<escola.length; linha++){
+            if(linha==0){
+                maisAlunos = escola[linha][1]
+                cursoMaior = escola[linha][0]
+                menosAlunos = escola[linha][1]
+                cursoMenor = escola[linha][0]
+            }
+            if (escola[linha][1] > maisAlunos){
+                maisAlunos = escola[linha][1]
+                cursoMaior = escola[linha][0]
+
+            }
+            if(escola[linha][1]<menosAlunos){
+                menosAlunos = escola[linha][1]
+                cursoMenor = escola[linha][0]
+            }
+            }
+
+            document.write("O curso com mais alunos é "+ cursoMaior+" com  "+" "+maisAlunos+" alunos.<br>")
+            document.write("O curso com menos alunos é "+ cursoMenor+" com  "+" "+menosAlunos+" alunos.")
+
+            
+
+
+
+        
+
+    </script>
+    
+</body>
+</html>
